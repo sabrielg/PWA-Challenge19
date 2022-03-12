@@ -1,6 +1,6 @@
 let db;
 
-const request = indexedDB.open('budget_tracker', 1);
+const request = indexedDB.open('new_budget', 1);
 
 // this event will emit if the database version changes (nonexistent to version 1, v1 to v2, etc.)
 request.onupgradeneeded = function(event) {
@@ -35,7 +35,7 @@ function saveRecord(record) {
     budgetStore.add(record);
   }
 
-  function uploadBudget() {
+  function checkDatabase() {
     // open a transaction on your db
     const transaction = db.transaction(['new_budget'], 'readwrite');
   
@@ -47,7 +47,7 @@ function saveRecord(record) {
     getAll.onsuccess = function() {
         // if there was data in indexedDb's store, let's send it to the api server
         if (getAll.result.length > 0) {
-          fetch('/api/transaction', {
+          fetch('/api/transaction/bulk', {
             method: 'POST',
             body: JSON.stringify(getAll.result),
             headers: {
@@ -75,4 +75,4 @@ function saveRecord(record) {
     // more to come...
   }
 
-  window.addEventListener('online', uploadBudget);
+  window.addEventListener('online', checkDatabase);
