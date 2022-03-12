@@ -1,10 +1,52 @@
 {
-    "name": "",
-    "short_name": "",
-    "orientation": "",
+    "icons": [
+            {   
+                "src": "icons/icon-72x72.png",
+                "sizes": "72x72",
+                "types": "image/png"
+            },
+            {   
+                "src": "icons/icon-96x96.png",
+                "sizes": "96x96",
+                "types": "image/png"
+            },   
+            {   
+                "src": "icons/icon-128x128.png",
+                "sizes": "128x128",
+                "types": "image/png"
+            },   
+            {   
+                "src": "icons/icon-144x144.png",
+                "sizes": "144x144",
+                "types": "image/png"
+            },   
+            {   
+                "src": "icons/icon-152x152.png",
+                "sizes": "152x152",
+                "types": "image/png"
+            },   
+            {   
+                "src": "icons/icon-192x192.png",
+                "sizes": "192x192",
+                "types": "image/png"
+            },       
+            {   
+                "src": "icons/icon-384x384.png",
+                "sizes": "384x384",
+                "types": "image/png"
+            },   
+            {   
+                "src": "icons/icon-512x512.png",
+                "sizes": "512x512",
+                "types": "image/png"
+            }   
+        ],
+    "name": "Budget Tracker",
+    "short_name": "Budgies",
+    "orientation": "portrait",
     "display": "standalone",
     "start_url": "../index.html",
-    "description": "",
-    "background_color": "#",
+    "description": "An app that allows you to create a budget and track transactions.",
+    "background_color": "#01579b",
     "theme_color": "#ffffff"
 }
